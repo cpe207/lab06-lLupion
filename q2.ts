@@ -38,15 +38,17 @@ const input1 = 15;
 const input2 = 60;
 const input3 = 250;
 
-//run
-Promise.all([
-  getTodo(input1),
-  getTodo(input2),
-  getTodo(input3)
-]).then((results) => {
+const run = async () => {
+  const results = await Promise.all([
+    getTodo(input1),
+    getTodo(input2),
+    getTodo(input3)
+  ]);
+
   results.forEach((result) => {
     console.log(result);
   });
-});
+};
 
+run();
 export default getTodo;

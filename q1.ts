@@ -25,10 +25,15 @@ const run = async () => {
   const result1 = await getUser(input1);
   const result2 = await getUser(input2);
 
+  return { result1, result2 };
+};
+
+const logResults = async () => {
+  const { result1, result2 } = await run();
   console.log(result1);
   console.log(result2);
 };
 
-run();
+logResults();
 // module.exports = getUser;
 export default getUser;
