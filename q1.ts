@@ -25,5 +25,5 @@ const input2 = 100;
 getUser(input1).then((result) => console.log(result));
 getUser(input2).then((result) => console.log(result));
 
-// module.exports = getUser;
+
 export default getUser;
