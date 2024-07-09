@@ -18,22 +18,12 @@ const getUser = async (userId: number): Promise<string> => {
 };
 
 //test case
-const run = async () => {
-  const input1 = 1;
-  const input2 = 100;
+const input1 = 1;
+const input2 = 100;
 
-  const result1 = await getUser(input1);
-  const result2 = await getUser(input2);
+//run
+getUser(input1).then((result) => console.log(result));
+getUser(input2).then((result) => console.log(result));
 
-  return { result1, result2 };
-};
-
-const logResults = async () => {
-  const { result1, result2 } = await run();
-  console.log(result1);
-  console.log(result2);
-};
-
-logResults();
 // module.exports = getUser;
 export default getUser;
